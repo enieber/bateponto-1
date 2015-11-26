@@ -32,14 +32,14 @@ public class CadastroUsuarioTest {
 	}
 	
 	@Test
-	public void deveriaRetornaFalsoSeLoginUsuarioFormularioForDiferenteDeString(){
+	public void deveriaRetornaFalsoSeLoginUsuarioFormularioForDiferenteDeLetras(){
 		FormularioCadastroUsuario cadastro = new FormularioCadastroUsuario();
 		String login = "1564648";
 		Assert.assertEquals(false, cadastro.validaLogin(login));
 	}
 	
 	@Test
-	public void deveriaRetornaFalsoSeNomeUsuarioFormularioForDiferenteDeString(){
+	public void deveriaRetornaFalsoSeNomeUsuarioFormularioForDiferenteDeLetras(){
 		FormularioCadastroUsuario cadastro = new FormularioCadastroUsuario();
 		String nome = "1564648";
 		Assert.assertEquals(false, cadastro.validaNome(nome));
