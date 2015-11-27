@@ -3,10 +3,30 @@ package com.bateponto.model;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class FormularioCadastroUsuario {
+import com.bateponto.entities.Usuario;
 
-
-	public FormularioCadastroUsuario() {
+public class ValidadorCadastroUsuario {
+	
+	private Usuario usuario = new Usuario();
+	
+	public ValidadorCadastroUsuario(){
+	}
+	
+	public ValidadorCadastroUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+	
+	public boolean validaUsuario(){
+		if (!validaLogin(usuario.getLogin()))
+			return false;
+		
+		if (!validaSenha(usuario.getSenha()))
+			return false;
+		
+		if (!validaNome(usuario.getNome()))
+			return false;
+		
+		return true;
 	}
 
 	public boolean validaLogin(String login) {

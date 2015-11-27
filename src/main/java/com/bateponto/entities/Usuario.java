@@ -6,6 +6,15 @@ public class Usuario {
 	private String nome;
 	private String login;
 	private String senha;
+	
+	public Usuario(){
+	}
+	
+	public Usuario(String nome, String login, String senha){
+		this.login = login;
+		this.nome = nome;
+		this.senha = senha;
+	}
 
 	public Long getUsuarioId() {
 		return usuarioId;
